@@ -25,7 +25,8 @@ async def send_welcome(message: types.Message):
 @dp.message_handler()
 async def echo(message: types.Message):
     try:
-        match message.text:
+        matn = str(message.text)
+        match matn:
             case "1-sinf":
                 await bot.send_message(chat_id=message.from_user.id, text="O'z sinfingizni tanlang ⌛️", reply_markup=sinfnomi1)      
             case "2-sinf":
